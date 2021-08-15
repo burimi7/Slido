@@ -1,0 +1,36 @@
+.component{    
+    display: flex;
+}
+@media (max-width: 800px){
+    .component{    
+        display: inline-block;
+    }
+.calendar{
+    width: 60%;
+}
+.events{
+    width: 40%;
+    background: red;
+}
+}
+
+
+.calendar{
+    width: 60%;
+}
+
+.events{
+    width: 40%;
+}
+
+/* @media (max-width: 900px){
+ 
+.calendar{
+    width: 100%;
+    display: inline-table;
+}
+.events{
+    width: 100%;
+    display: inline-table;
+}   
+} */
