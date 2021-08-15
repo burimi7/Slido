@@ -1,0 +1,28 @@
+
+[
+    {
+        "id": 1,
+        "stype": "Birthday",
+        "icon": "<i class=\"fas fa-birthday-cake\"></i>"
+    },
+    {
+        "id": 2,
+        "stype": "Meeting",
+        "icon":"<i class=\"fas fa-handshake\"></i>"
+    },
+    {
+        "id": 3,
+        "stype": "Party",
+        "icon":"<i class=\"fas fa-glass-cheers\"></i>"
+    },
+    {
+        "id": 4,
+        "stype": "Vacation",
+        "icon":"<i class=\"fas fa-plane\"></i>"
+    },
+    {
+        "id": 5,
+        "stype": "Exam",
+        "icon":"<i class=\"fas fa-file-alt\"></i>"
+    }
+]

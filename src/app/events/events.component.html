@@ -1,0 +1,55 @@
+
+<h2 style="color:darkcyan" *ngIf="SlidoService.EventsToShow.length==0">No events on {{SlidoService.SelectedDate | date: 'MM/dd/yyyy'}}</h2>
+
+<div *ngFor="let Event of SlidoService.EventsToShow; let i=index" class="event_card">
+
+
+
+    
+    <div class="event_title">
+        <!-- <label [innerHtml]="GetIcon(Event)"></label> -->
+        <p style="font-size: 20px;">{{Event.title}}</p>
+    </div>
+
+    <div class="event_info">
+        <div class="event_icon">
+            <label [innerHtml]="GetIcon(Event)"></label>
+        </div>
+        <table>
+            <tr *ngIf="SelectedEvent==i">
+                <td class="alignright">Type</td>
+                <td class="alignleft">{{ GetEventType(Event) }} </td>
+            </tr>
+            <!-- <tr>
+                <td class="alignright">Name</td>
+                 <td class="alignleft">{{Event.title}}</td>
+            </tr> -->
+            <tr>
+                <td class="alignright">Start</td>
+                <td class="alignleft">{{Event.start | date: 'MM/dd/yyyy HH:mm:ss'}}</td>
+            </tr>
+            <tr *ngIf="Event.allDay==false && SelectedEvent==i">
+                <td class="alignright">End</td>
+                <td class="alignleft">{{Event.end}}</td>
+            </tr>
+            <tr *ngIf="SelectedEvent==i">
+                <td class="alignright">All day?</td>
+                <td class="alignleft">{{Event.allDay==true?'Yes':'No'}}</td>
+            </tr>
+            <tr *ngIf="SelectedEvent==i">
+                <td class="alignright">Description</td>
+                <td class="alignleft">{{ Event.sdescription }} </td>
+            </tr>
+        </table>
+
+    </div>
+
+    <button class="event_more" (click)="SelectedEvent==i?SelectedEvent=-1:SelectedEvent=i">
+        More...
+    </button>
+
+    <button class="event_more" *ngIf="SelectedEvent==i">
+        <i class="fas fa-trash-alt"></i>
+    </button>
+
+</div>
